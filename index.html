@@ -663,6 +663,26 @@
         let selectedSkipSize = '';
         let selectedSkipPrice = 0;
 
+        // Check if user came from skip-guide page with a pre-selected skip
+        window.addEventListener('load', function() {
+            const preSelectedSkip = sessionStorage.getItem('selectedSkip');
+            const preSelectedPrice = sessionStorage.getItem('selectedPrice');
+            
+            if (preSelectedSkip && preSelectedPrice) {
+                // Auto-select the skip
+                selectSkip(preSelectedSkip, parseInt(preSelectedPrice));
+                
+                // Clear the session storage
+                sessionStorage.removeItem('selectedSkip');
+                sessionStorage.removeItem('selectedPrice');
+                
+                // Scroll to the form
+                setTimeout(function() {
+                    document.getElementById('getaquote').scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            }
+        });
+
         function selectSkip(size, price) {
             // Remove previous selection
             document.querySelectorAll('.skip-card').forEach(card => {
