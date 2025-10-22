@@ -86,13 +86,13 @@
         }
         /* Service type card hover effect */
         .form-check:has(input[type="radio"]:checked) {
-            border-color: #348E38 !important;
-            background: #E8F5E9 !important;
-            box-shadow: 0 0 15px rgba(52, 142, 56, 0.3);
+            border-color: #dc3545 !important;
+            background: #ffe6e6 !important;
+            box-shadow: 0 0 12px rgba(220, 53, 69, 0.3) !important;
         }
         .form-check:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
         }
         /* Ensure consistent font family */
         #skipOrderForm * {
@@ -512,12 +512,12 @@
                                     <small class="text-muted">Start typing your address and select from suggestions</small>
                                 </div>
                                 <div class="col-sm-6">
-                                    <label class="form-label fw-bold mb-2"><i class="fa fa-calendar-alt text-danger me-2"></i>Preferred Delivery Date</label>
-                                    <input type="date" class="form-control bg-light border-0" id="deliveryDate" name="deliveryDate" required style="height: 60px; font-size: 1.1rem;">
+                                    <label class="form-label fw-medium mb-2"><i class="fa fa-calendar-alt text-danger me-2"></i>Preferred Delivery Date</label>
+                                    <input type="date" class="form-control border-2 shadow-sm" id="deliveryDate" name="deliveryDate" required style="height: 48px; border-color: #dee2e6; border-radius: 8px;">
                                 </div>
                                 <div class="col-sm-6">
-                                    <label class="form-label fw-bold mb-2"><i class="fa fa-clock text-danger me-2"></i>Delivery Time</label>
-                                    <select class="form-select bg-light border-0" id="deliveryTime" name="deliveryTime" required style="height: 60px; font-size: 1.1rem;">
+                                    <label class="form-label fw-medium mb-2"><i class="fa fa-clock text-danger me-2"></i>Delivery Time</label>
+                                    <select class="form-select border-2 shadow-sm" id="deliveryTime" name="deliveryTime" required style="height: 48px; border-color: #dee2e6; border-radius: 8px;">
                                         <option value="" selected disabled>Choose timing...</option>
                                         <option value="morning">Morning (8am - 12pm)</option>
                                         <option value="afternoon">Afternoon (12pm - 5pm)</option>
@@ -525,23 +525,23 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <label class="form-label fw-bold mb-3"><i class="fa fa-truck text-danger me-2"></i>Service Type</label>
+                                    <label class="form-label fw-medium mb-2"><i class="fa fa-truck text-danger me-2"></i>Service Type</label>
                                     <div class="row g-3">
                                         <div class="col-md-6">
-                                            <div class="form-check p-4 border rounded-3 bg-light position-relative" style="cursor: pointer; transition: all 0.3s ease;" onclick="document.getElementById('changeover').click();">
-                                                <input class="form-check-input" type="radio" name="serviceType" id="changeover" value="changeover" checked style="width: 20px; height: 20px;">
+                                            <div class="form-check p-3 border-2 rounded shadow-sm" style="cursor: pointer; transition: all 0.3s ease; border-color: #dee2e6;" onclick="document.getElementById('changeover').click();">
+                                                <input class="form-check-input" type="radio" name="serviceType" id="changeover" value="changeover" checked>
                                                 <label class="form-check-label w-100 ms-2" for="changeover" style="cursor: pointer;">
-                                                    <h5 class="mb-2"><i class="fa fa-exchange-alt text-primary me-2"></i>Changeover Service</h5>
-                                                    <p class="text-muted mb-0 small">We deliver the skip, you fill it at your own pace, then we collect it when you're ready</p>
+                                                    <strong class="d-block mb-1"><i class="fa fa-exchange-alt text-primary me-2"></i>Changeover Service</strong>
+                                                    <small class="text-muted">We deliver the skip, you fill it at your own pace, then we collect it when you're ready</small>
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-check p-4 border rounded-3 bg-light position-relative" style="cursor: pointer; transition: all 0.3s ease;" onclick="document.getElementById('waitload').click();">
-                                                <input class="form-check-input" type="radio" name="serviceType" id="waitload" value="waitload" style="width: 20px; height: 20px;">
+                                            <div class="form-check p-3 border-2 rounded shadow-sm" style="cursor: pointer; transition: all 0.3s ease; border-color: #dee2e6;" onclick="document.getElementById('waitload').click();">
+                                                <input class="form-check-input" type="radio" name="serviceType" id="waitload" value="waitload">
                                                 <label class="form-check-label w-100 ms-2" for="waitload" style="cursor: pointer;">
-                                                    <h5 class="mb-2"><i class="fa fa-hourglass-half text-danger me-2"></i>Wait & Load</h5>
-                                                    <p class="text-muted mb-0 small">Our driver waits while you load the skip, then takes it away immediately (Premium service)</p>
+                                                    <strong class="d-block mb-1"><i class="fa fa-hourglass-half text-warning me-2"></i>Wait & Load</strong>
+                                                    <small class="text-muted">Our driver waits while you load the skip, then takes it away immediately (Premium service)</small>
                                                 </label>
                                             </div>
                                         </div>
