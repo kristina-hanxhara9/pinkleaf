@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Gardener - Gardening Website Template</title>
+    <title>Pink Leaf Ltd - Skip Hire & Waste Management in Greenford</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="skip hire, waste management, rubbish removal, Greenford, London" name="keywords">
+    <meta content="Professional skip hire and waste management services in Greenford, Greater London. Fast, reliable, and affordable." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -30,6 +30,42 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .skip-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+        .skip-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .skip-card.selected {
+            border-color: #198754;
+            box-shadow: 0 0 20px rgba(25, 135, 84, 0.3);
+        }
+        .skip-size-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #198754;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 18px;
+            z-index: 10;
+        }
+        .skip-image {
+            height: 300px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,11 +82,11 @@
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center me-4">
                     <span class="fa fa-phone-alt me-2"></span>
-                    <span>+012 345 6789</span>
+                    <span>+44 20 1234 5678</span>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <span class="far fa-envelope me-2"></span>
-                    <span>info@example.com</span>
+                    <span>info@pinkleaf.co.uk</span>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
@@ -69,38 +105,28 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h1 class="m-0">Gardener</h1>
+        <a href="#home" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 class="m-0">Pink Leaf Ltd</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="project.html" class="nav-item nav-link">Projects</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#services" class="nav-item nav-link">Services</a>
+                <a href="#testimonials" class="nav-item nav-link">Testimonials</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="#getaquote" class="btn btn-primary py-4 px-lg-4 rounded-0 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div id="home" class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -109,8 +135,8 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
-                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Make Your Home Like Garden</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
+                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Professional Waste Management in Greenford</h1>
+                                    <a href="#getaquote" class="btn btn-primary py-sm-3 px-sm-4">Order Your Skip Now</a>
                                 </div>
                             </div>
                         </div>
@@ -122,8 +148,8 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7">
-                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Create Your Own Small Garden At Home</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
+                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Fast & Reliable Skip Hire Services</h1>
+                                    <a href="#getaquote" class="btn btn-primary py-sm-3 px-sm-4">Get Started</a>
                                 </div>
                             </div>
                         </div>
@@ -153,11 +179,11 @@
                     <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-times text-primary"></i>
+                                <i class="fa fa-pound-sign text-primary"></i>
                             </div>
                             <div class="ps-3">
-                                <h4>No Hidden Cost</h4>
-                                <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                <h4>Transparent Pricing</h4>
+                                <span>No hidden fees. What you see is what you pay</span>
                             </div>
                         </div>
                     </div>
@@ -166,11 +192,11 @@
                     <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-users text-primary"></i>
+                                <i class="fa fa-truck text-primary"></i>
                             </div>
                             <div class="ps-3">
-                                <h4>Dedicated Team</h4>
-                                <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                <h4>Same Day Service</h4>
+                                <span>Quick delivery and collection across Greenford</span>
                             </div>
                         </div>
                     </div>
@@ -179,11 +205,11 @@
                     <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-phone text-primary"></i>
+                                <i class="fa fa-recycle text-primary"></i>
                             </div>
                             <div class="ps-3">
-                                <h4>24/7 Available</h4>
-                                <span>Clita erat ipsum lorem sit sed stet duo justo</span>
+                                <h4>Eco-Friendly</h4>
+                                <span>Licensed waste carriers committed to recycling</span>
                             </div>
                         </div>
                     </div>
@@ -195,33 +221,33 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div id="about" class="container-xxl py-5">
         <div class="container">
             <div class="row g-5 align-items-end">
                 <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
                     <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/about.jpg">
                 </div>
                 <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
-                    <h1 class="display-1 text-primary mb-0">25</h1>
-                    <p class="text-primary mb-4">Year of Experience</p>
-                    <h1 class="display-5 mb-4">We Make Your Home Like A Garden</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
+                    <h1 class="display-1 text-primary mb-0">15+</h1>
+                    <p class="text-primary mb-4">Years of Experience</p>
+                    <h1 class="display-5 mb-4">Pink Leaf Ltd - Your Trusted Waste Management Partner</h1>
+                    <p class="mb-4">Based in Greenford, Greater London, Pink Leaf Ltd provides professional skip hire and waste management services to homes and businesses. We pride ourselves on reliable service, competitive pricing, and environmental responsibility.</p>
+                    <a class="btn btn-primary py-3 px-4" href="#services">Our Services</a>
                 </div>
                 <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="row g-5">
                         <div class="col-12 col-sm-6 col-lg-12">
                             <div class="border-start ps-4">
-                                <i class="fa fa-award fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Award Winning</h4>
-                                <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna</span>
+                                <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
+                                <h4 class="mb-3">Fully Licensed</h4>
+                                <span>Registered waste carrier with all required permits</span>
                             </div>
                         </div>
                         <div class="col-12 col-sm-6 col-lg-12">
                             <div class="border-start ps-4">
-                                <i class="fa fa-users fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Dedicated Team</h4>
-                                <span>Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna</span>
+                                <i class="fa fa-thumbs-up fa-3x text-primary mb-3"></i>
+                                <h4 class="mb-3">Trusted Service</h4>
+                                <span>Hundreds of satisfied customers across Greater London</span>
                             </div>
                         </div>
                     </div>
@@ -232,86 +258,12 @@
     <!-- About End -->
 
 
-    <!-- Facts Start -->
-    <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Garden Complated</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Dedicated Staff</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Awards Achieved</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Facts End -->
-
-
-    <!-- Features Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="fs-5 fw-bold text-primary">Why Choosing Us!</p>
-                    <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="row g-4 align-items-center">
-                        <div class="col-md-6">
-                            <div class="row g-4">
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
-                                    <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
-                                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                            <i class="fa fa-check fa-3x text-primary"></i>
-                                        </div>
-                                        <h4 class="mb-0">100% Satisfaction</h4>
-                                    </div>
-                                </div>
-                                <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
-                                    <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
-                                        <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                            <i class="fa fa-users fa-3x text-primary"></i>
-                                        </div>
-                                        <h4 class="mb-0">Dedicated Team</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.7s">
-                            <div class="text-center rounded py-5 px-4" style="box-shadow: 0 0 45px rgba(0,0,0,.08);">
-                                <div class="btn-square bg-light rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                                    <i class="fa fa-tools fa-3x text-primary"></i>
-                                </div>
-                                <h4 class="mb-0">Modern Equipment</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features End -->
-
-
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <div id="services" class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-bold text-primary">Our Services</p>
-                <h1 class="display-5 mb-5">Services That We Offer For You</h1>
+                <h1 class="display-5 mb-5">Comprehensive Waste Management Solutions</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -323,9 +275,8 @@
                             <div class="btn-square rounded-circle mx-auto mb-3">
                                 <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
                             </div>
-                            <h4 class="mb-3">Landscaping</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                            <h4 class="mb-3">Residential Skip Hire</h4>
+                            <p class="mb-4">Perfect for home renovations, garden clearances, and household decluttering. Available in various sizes.</p>
                         </div>
                     </div>
                 </div>
@@ -338,9 +289,8 @@
                             <div class="btn-square rounded-circle mx-auto mb-3">
                                 <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
                             </div>
-                            <h4 class="mb-3">Pruning plants</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                            <h4 class="mb-3">Commercial Waste</h4>
+                            <p class="mb-4">Tailored waste management solutions for businesses, construction sites, and commercial properties.</p>
                         </div>
                     </div>
                 </div>
@@ -353,9 +303,8 @@
                             <div class="btn-square rounded-circle mx-auto mb-3">
                                 <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
                             </div>
-                            <h4 class="mb-3">Irrigation & Drainage</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                            <h4 class="mb-3">Rubbish Removal</h4>
+                            <p class="mb-4">Fast and efficient rubbish collection and disposal services for any type of waste.</p>
                         </div>
                     </div>
                 </div>
@@ -368,9 +317,8 @@
                             <div class="btn-square rounded-circle mx-auto mb-3">
                                 <img class="img-fluid" src="img/icon/icon-4.png" alt="Icon">
                             </div>
-                            <h4 class="mb-3">Garden Maintenance </h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                            <h4 class="mb-3">Garden Waste</h4>
+                            <p class="mb-4">Specialized service for garden clearances, green waste, and landscaping projects.</p>
                         </div>
                     </div>
                 </div>
@@ -383,9 +331,8 @@
                             <div class="btn-square rounded-circle mx-auto mb-3">
                                 <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
                             </div>
-                            <h4 class="mb-3">Green Technology</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                            <h4 class="mb-3">Recycling Services</h4>
+                            <p class="mb-4">Environmentally responsible waste sorting and recycling to minimize landfill impact.</p>
                         </div>
                     </div>
                 </div>
@@ -398,9 +345,8 @@
                             <div class="btn-square rounded-circle mx-auto mb-3">
                                 <img class="img-fluid" src="img/icon/icon-2.png" alt="Icon">
                             </div>
-                            <h4 class="mb-3">Urban Gardening</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read More</a>
+                            <h4 class="mb-3">Same Day Delivery</h4>
+                            <p class="mb-4">Need a skip urgently? We offer same-day delivery and collection across Greenford.</p>
                         </div>
                     </div>
                 </div>
@@ -410,82 +356,121 @@
     <!-- Service End -->
 
 
-    <!-- Quote Start -->
-    <div class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
+    <!-- Quote/Order Skip Start -->
+    <div id="getaquote" class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-7">
+                <div class="col-lg-10">
                     <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                        <h1 class="display-5 text-center mb-5">Get A Free Quote</h1>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="gname" placeholder="Gurdian Name">
-                                    <label for="gname">Your Name</label>
+                        <h1 class="display-5 text-center mb-4">Order Your Skip Online</h1>
+                        <p class="text-center mb-5">Choose your skip size and provide your details for quick delivery</p>
+                        
+                        <!-- Skip Selection -->
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="skip-card rounded p-4 text-center position-relative" onclick="selectSkip('small', 200)" id="skip-small">
+                                    <div class="skip-size-badge">£200</div>
+                                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500" alt="Small Skip" class="skip-image rounded mb-3">
+                                    <h3 class="mb-3">Small Skip</h3>
+                                    <p class="mb-3">Ideal for household waste, small renovations, and garden clearances</p>
+                                    <ul class="list-unstyled text-start">
+                                        <li><i class="fa fa-check text-success me-2"></i>4-6 cubic yards</li>
+                                        <li><i class="fa fa-check text-success me-2"></i>Fits on a driveway</li>
+                                        <li><i class="fa fa-check text-success me-2"></i>Holds 40-60 bin bags</li>
+                                        <li><i class="fa fa-check text-success me-2"></i>Perfect for small projects</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-primary w-100 mt-3" onclick="selectSkip('small', 200)">Select Small Skip</button>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control bg-light border-0" id="gmail" placeholder="Gurdian Email">
-                                    <label for="gmail">Your Email</label>
+                            <div class="col-md-6">
+                                <div class="skip-card rounded p-4 text-center position-relative" onclick="selectSkip('big', 400)" id="skip-big">
+                                    <div class="skip-size-badge">£400</div>
+                                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500" alt="Large Skip" class="skip-image rounded mb-3">
+                                    <h3 class="mb-3">Large Skip</h3>
+                                    <p class="mb-3">Best for major renovations, construction projects, and large clearances</p>
+                                    <ul class="list-unstyled text-start">
+                                        <li><i class="fa fa-check text-success me-2"></i>12-14 cubic yards</li>
+                                        <li><i class="fa fa-check text-success me-2"></i>Requires more space</li>
+                                        <li><i class="fa fa-check text-success me-2"></i>Holds 120-140 bin bags</li>
+                                        <li><i class="fa fa-check text-success me-2"></i>Great for large projects</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-primary w-100 mt-3" onclick="selectSkip('big', 400)">Select Large Skip</button>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="cname" placeholder="Child Name">
-                                    <label for="cname">Your Mobile</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="cage" placeholder="Child Age">
-                                    <label for="cage">Service Type</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button class="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
                             </div>
                         </div>
+
+                        <!-- Order Form -->
+                        <form id="skipOrderForm" onsubmit="submitOrder(event)">
+                            <input type="hidden" id="skipSize" name="skipSize" required>
+                            <input type="hidden" id="skipPrice" name="skipPrice" required>
+                            
+                            <div class="alert alert-info mb-4" id="selectedSkipInfo" style="display: none;">
+                                <strong>Selected:</strong> <span id="selectedSkipText"></span>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-light border-0" id="fullName" name="fullName" placeholder="Full Name" required>
+                                        <label for="fullName">Full Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control bg-light border-0" id="phone" name="phone" placeholder="Phone Number" required>
+                                        <label for="phone">Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-light border-0" id="addressSearch" name="address" placeholder="Start typing your address..." required>
+                                        <label for="addressSearch">Delivery Address</label>
+                                    </div>
+                                    <small class="text-muted">Start typing your address and select from suggestions</small>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control bg-light border-0" placeholder="Any special instructions?" id="notes" name="notes" style="height: 100px"></textarea>
+                                        <label for="notes">Additional Notes (Optional)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-success btn-lg py-3 px-5" type="submit">
+                                        <i class="fa fa-shopping-cart me-2"></i>Complete Order
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Quote End -->
-
-
-    
+    <!-- Quote/Order Skip End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
+    <div id="testimonials" class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="fs-5 fw-bold text-primary">Testimonial</p>
-                    <h1 class="display-5 mb-5">What Our Clients Say About Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                    <a class="btn btn-primary py-3 px-4" href="">See More</a>
+                    <p class="fs-5 fw-bold text-primary">Testimonials</p>
+                    <h1 class="display-5 mb-5">What Our Customers Say About Us!</h1>
+                    <p class="mb-4">We're proud to serve the Greenford community with reliable, professional waste management services. Here's what our customers have to say about their experience with Pink Leaf Ltd.</p>
                 </div>
                 <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item">
                             <img class="img-fluid rounded mb-3" src="img/testimonial-1.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
+                            <p class="fs-5">"Excellent service! The skip was delivered on time and collected promptly. The team was professional and the pricing was very competitive. Highly recommend Pink Leaf Ltd for anyone in Greenford needing skip hire."</p>
+                            <h4>Sarah Mitchell</h4>
+                            <span>Homeowner, Greenford</span>
                         </div>
                         <div class="testimonial-item">
                             <img class="img-fluid rounded mb-3" src="img/testimonial-2.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
+                            <p class="fs-5">"We've used Pink Leaf Ltd for multiple projects. They're always reliable, reasonably priced, and the booking process is straightforward. Great local company that we trust completely."</p>
+                            <h4>James Cooper</h4>
+                            <span>Builder, West London</span>
                         </div>
                     </div>
                 </div>
@@ -495,49 +480,45 @@
     <!-- Testimonial End -->
 
     <!-- Contact Start -->
-    <div class="container-xxl py-5">
+    <div id="contact" class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <p class="fs-5 fw-bold text-primary">Contact Us</p>
-                    <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
-                    <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
-                            </div>
+                    <h1 class="display-5 mb-5">Get In Touch With Pink Leaf Ltd</h1>
+                    <p class="mb-4">Have questions about our services? Need a custom quote? Our friendly team is here to help. Contact us today!</p>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <i class="fa fa-map-marker-alt text-white"></i>
                         </div>
-                    </form>
+                        <div>
+                            <h5>Our Location</h5>
+                            <span>Greenford, Greater London, UK</span>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h5>Call Us</h5>
+                            <span>+44 20 1234 5678</span>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <i class="fa fa-envelope text-white"></i>
+                        </div>
+                        <div>
+                            <h5>Email Us</h5>
+                            <span>info@pinkleaf.co.uk</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
                     <div class="position-relative rounded overflow-hidden h-100">
                         <iframe class="position-relative w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39774.55822923107!2d-0.3753599!3d51.5428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760d4b6a1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sGreenford%2C%20UK!5e0!3m2!1sen!2suk!4v1234567890"
                         frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
                         tabindex="0"></iframe>
                     </div>
@@ -553,11 +534,11 @@
     <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Pink Leaf Ltd</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Greenford, Greater London, UK</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+44 20 1234 5678</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@pinkleaf.co.uk</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
@@ -565,29 +546,21 @@
                         <a class="btn btn-square btn-outline-light rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Landscaping</a>
-                    <a class="btn btn-link" href="">Pruning plants</a>
-                    <a class="btn btn-link" href="">Urban Gardening</a>
-                    <a class="btn btn-link" href="">Garden Maintenance</a>
-                    <a class="btn btn-link" href="">Green Technology</a>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4">Our Services</h4>
+                    <a class="btn btn-link" href="#services">Residential Skip Hire</a>
+                    <a class="btn btn-link" href="#services">Commercial Waste</a>
+                    <a class="btn btn-link" href="#services">Rubbish Removal</a>
+                    <a class="btn btn-link" href="#services">Garden Waste</a>
+                    <a class="btn btn-link" href="#services">Recycling Services</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-light border-light w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                    <a class="btn btn-link" href="#about">About Us</a>
+                    <a class="btn btn-link" href="#contact">Contact Us</a>
+                    <a class="btn btn-link" href="#services">Our Services</a>
+                    <a class="btn btn-link" href="#getaquote">Get A Quote</a>
+                    <a class="btn btn-link" href="#testimonials">Testimonials</a>
                 </div>
             </div>
         </div>
@@ -600,11 +573,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">Pink Leaf Ltd</a>, All Rights Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+                    Serving Greenford & Greater London
                 </div>
             </div>
         </div>
@@ -628,8 +600,102 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+    <!-- Google Maps API for Address Autocomplete -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Custom Skip Order Script -->
+    <script>
+        let selectedSkipSize = '';
+        let selectedSkipPrice = 0;
+
+        function selectSkip(size, price) {
+            // Remove previous selection
+            document.querySelectorAll('.skip-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            
+            // Add selection to clicked card
+            document.getElementById('skip-' + size).classList.add('selected');
+            
+            // Store selection
+            selectedSkipSize = size;
+            selectedSkipPrice = price;
+            
+            // Update hidden form fields
+            document.getElementById('skipSize').value = size;
+            document.getElementById('skipPrice').value = price;
+            
+            // Show selected info
+            const infoDiv = document.getElementById('selectedSkipInfo');
+            const infoText = document.getElementById('selectedSkipText');
+            infoText.textContent = `${size.charAt(0).toUpperCase() + size.slice(1)} Skip - £${price}`;
+            infoDiv.style.display = 'block';
+            
+            // Scroll to form
+            document.getElementById('skipOrderForm').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function submitOrder(event) {
+            event.preventDefault();
+            
+            if (!selectedSkipSize) {
+                alert('Please select a skip size first!');
+                return;
+            }
+            
+            // Get form data
+            const formData = {
+                skipSize: selectedSkipSize,
+                skipPrice: selectedSkipPrice,
+                fullName: document.getElementById('fullName').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('addressSearch').value,
+                notes: document.getElementById('notes').value
+            };
+            
+            // In a real application, you would send this to your backend
+            console.log('Order submitted:', formData);
+            
+            // Show success message
+            alert(`Thank you! Your ${selectedSkipSize} skip order for £${selectedSkipPrice} has been received. We'll contact you shortly at ${formData.phone} to confirm delivery details.`);
+            
+            // Reset form
+            document.getElementById('skipOrderForm').reset();
+            document.querySelectorAll('.skip-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            document.getElementById('selectedSkipInfo').style.display = 'none';
+            selectedSkipSize = '';
+            selectedSkipPrice = 0;
+        }
+
+        // Initialize Google Maps Autocomplete
+        function initAutocomplete() {
+            const input = document.getElementById('addressSearch');
+            const options = {
+                componentRestrictions: { country: 'uk' },
+                fields: ['address_components', 'formatted_address'],
+                types: ['address']
+            };
+            
+            const autocomplete = new google.maps.places.Autocomplete(input, options);
+            
+            autocomplete.addListener('place_changed', function() {
+                const place = autocomplete.getPlace();
+                if (place.formatted_address) {
+                    input.value = place.formatted_address;
+                }
+            });
+        }
+
+        // Initialize autocomplete when page loads
+        if (typeof google !== 'undefined' && google.maps) {
+            google.maps.event.addDomListener(window, 'load', initAutocomplete);
+        }
+    </script>
 </body>
 
 </html>
