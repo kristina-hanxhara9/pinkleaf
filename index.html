@@ -39,6 +39,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             border: 3px solid transparent;
+            height: 100%;
         }
         .skip-card:hover {
             transform: translateY(-10px);
@@ -50,20 +51,21 @@
         }
         .skip-size-badge {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px;
             background: #198754;
             color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
+            padding: 8px 15px;
+            border-radius: 20px;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 16px;
             z-index: 10;
         }
         .skip-image {
-            height: 300px;
-            object-fit: cover;
+            height: 200px;
+            object-fit: contain;
             width: 100%;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -360,41 +362,86 @@
     <div id="getaquote" class="container-fluid quote my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-2.jpg">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-10">
+                <div class="col-lg-11">
                     <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
                         <h1 class="display-5 text-center mb-4">Order Your Skip Online</h1>
                         <p class="text-center mb-5">Choose your skip size and provide your details for quick delivery</p>
                         
                         <!-- Skip Selection -->
                         <div class="row g-4 mb-5">
-                            <div class="col-md-6">
-                                <div class="skip-card rounded p-4 text-center position-relative" onclick="selectSkip('small', 200)" id="skip-small">
-                                    <div class="skip-size-badge">£200</div>
-                                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500" alt="Small Skip" class="skip-image rounded mb-3">
-                                    <h3 class="mb-3">Small Skip</h3>
-                                    <p class="mb-3">Ideal for household waste, small renovations, and garden clearances</p>
-                                    <ul class="list-unstyled text-start">
-                                        <li><i class="fa fa-check text-success me-2"></i>4-6 cubic yards</li>
-                                        <li><i class="fa fa-check text-success me-2"></i>Fits on a driveway</li>
-                                        <li><i class="fa fa-check text-success me-2"></i>Holds 40-60 bin bags</li>
-                                        <li><i class="fa fa-check text-success me-2"></i>Perfect for small projects</li>
+                            <!-- 8 Yard Skip -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="skip-card rounded p-3 text-center position-relative" onclick="selectSkip('8yard', 270)" id="skip-8yard">
+                                    <div class="skip-size-badge">£270</div>
+                                    <img src="img/images/8yrd.png" alt="8 Yard Skip" class="skip-image rounded mb-3">
+                                    <h5 class="mb-2">🟨 8 Yard Skip</h5>
+                                    <p class="small mb-2"><strong>(Builder's Skip)</strong></p>
+                                    <ul class="list-unstyled text-start small mb-3">
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>L:</strong> 3.66m (12ft)</li>
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>W:</strong> 1.68m (5'6")</li>
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>H:</strong> 1.22m (4ft)</li>
+                                        <li><i class="fa fa-box text-success me-2"></i><strong>Volume:</strong> 6.1 m³ / 8 yards</li>
+                                        <li><i class="fa fa-trash text-success me-2"></i><strong>Holds:</strong> 60-80 bin bags</li>
+                                        <li><i class="fa fa-weight text-warning me-2"></i><strong>Max:</strong> 6-8 tonnes</li>
                                     </ul>
-                                    <button type="button" class="btn btn-primary w-100 mt-3" onclick="selectSkip('small', 200)">Select Small Skip</button>
+                                    <button type="button" class="btn btn-primary w-100 btn-sm" onclick="selectSkip('8yard', 270)">Select 8 Yard</button>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="skip-card rounded p-4 text-center position-relative" onclick="selectSkip('big', 400)" id="skip-big">
-                                    <div class="skip-size-badge">£400</div>
-                                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500" alt="Large Skip" class="skip-image rounded mb-3">
-                                    <h3 class="mb-3">Large Skip</h3>
-                                    <p class="mb-3">Best for major renovations, construction projects, and large clearances</p>
-                                    <ul class="list-unstyled text-start">
-                                        <li><i class="fa fa-check text-success me-2"></i>12-14 cubic yards</li>
-                                        <li><i class="fa fa-check text-success me-2"></i>Requires more space</li>
-                                        <li><i class="fa fa-check text-success me-2"></i>Holds 120-140 bin bags</li>
-                                        <li><i class="fa fa-check text-success me-2"></i>Great for large projects</li>
+                            
+                            <!-- 10 Yard Skip -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="skip-card rounded p-3 text-center position-relative" onclick="selectSkip('10yard', 300)" id="skip-10yard">
+                                    <div class="skip-size-badge">£300</div>
+                                    <img src="img/images/10yrd.png" alt="10 Yard Skip" class="skip-image rounded mb-3">
+                                    <h5 class="mb-2">🟧 10 Yard Skip</h5>
+                                    <p class="small mb-2"><strong>(Large Builder's)</strong></p>
+                                    <ul class="list-unstyled text-start small mb-3">
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>L:</strong> 3.7m (12'2")</li>
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>W:</strong> 1.78m (5'10")</li>
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>H:</strong> 1.52m (5ft)</li>
+                                        <li><i class="fa fa-box text-success me-2"></i><strong>Volume:</strong> 7.6 m³ / 10 yards</li>
+                                        <li><i class="fa fa-trash text-success me-2"></i><strong>Holds:</strong> 80-100 bin bags</li>
+                                        <li><i class="fa fa-weight text-warning me-2"></i><strong>Max:</strong> 8-10 tonnes</li>
                                     </ul>
-                                    <button type="button" class="btn btn-primary w-100 mt-3" onclick="selectSkip('big', 400)">Select Large Skip</button>
+                                    <button type="button" class="btn btn-primary w-100 btn-sm" onclick="selectSkip('10yard', 300)">Select 10 Yard</button>
+                                </div>
+                            </div>
+                            
+                            <!-- 12 Yard Skip (Standard) -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="skip-card rounded p-3 text-center position-relative" onclick="selectSkip('12yard-standard', 360)" id="skip-12yard-standard">
+                                    <div class="skip-size-badge">£360</div>
+                                    <img src="img/images/12yrd.png" alt="12 Yard Skip" class="skip-image rounded mb-3">
+                                    <h5 class="mb-2">🟩 12 Yard Skip</h5>
+                                    <p class="small mb-2"><strong>(Standard)</strong></p>
+                                    <ul class="list-unstyled text-start small mb-3">
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>L:</strong> 3.7-4.1m (12-13.5ft)</li>
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>W:</strong> 1.78m (5'10")</li>
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>H:</strong> 1.68m (5'6")</li>
+                                        <li><i class="fa fa-box text-success me-2"></i><strong>Volume:</strong> 9.2 m³ / 12 yards</li>
+                                        <li><i class="fa fa-trash text-success me-2"></i><strong>Holds:</strong> 100-120 bin bags</li>
+                                        <li><i class="fa fa-weight text-warning me-2"></i><strong>Max:</strong> 8-10 tonnes</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-primary w-100 btn-sm" onclick="selectSkip('12yard-standard', 360)">Select 12 Yard</button>
+                                </div>
+                            </div>
+                            
+                            <!-- 12 Yard Skip (Premium) -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="skip-card rounded p-3 text-center position-relative" onclick="selectSkip('12yard-premium', 400)" id="skip-12yard-premium">
+                                    <div class="skip-size-badge" style="background: #dc3545;">£400</div>
+                                    <img src="img/images/12yrd.png" alt="12 Yard Skip Premium" class="skip-image rounded mb-3">
+                                    <h5 class="mb-2">🟩 12 Yard Skip</h5>
+                                    <p class="small mb-2"><strong>(Premium Service)</strong></p>
+                                    <ul class="list-unstyled text-start small mb-3">
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>L:</strong> 3.7-4.1m (12-13.5ft)</li>
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>W:</strong> 1.78m (5'10")</li>
+                                        <li><i class="fa fa-ruler text-primary me-2"></i><strong>H:</strong> 1.68m (5'6")</li>
+                                        <li><i class="fa fa-box text-success me-2"></i><strong>Volume:</strong> 9.2 m³ / 12 yards</li>
+                                        <li><i class="fa fa-trash text-success me-2"></i><strong>Holds:</strong> 100-120 bin bags</li>
+                                        <li><i class="fa fa-star text-warning me-2"></i><strong>Priority service</strong></li>
+                                    </ul>
+                                    <button type="button" class="btn btn-danger w-100 btn-sm" onclick="selectSkip('12yard-premium', 400)">Select Premium</button>
                                 </div>
                             </div>
                         </div>
@@ -479,58 +526,55 @@
     </div>
     <!-- Testimonial End -->
 
-        <!-- Contact Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                        <p class="fs-5 fw-bold text-primary">Contact Us</p>
-                        <h1 class="display-5 mb-5">Have questions about our services? Need a custom quote? Our friendly team is here to help. Contact us today!</h1>
-                        <p class="mb-4">Have questions about our services? Need a custom quote? Our friendly team is here to help. Contact us today!</a>.</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
-                        <div class="position-relative rounded overflow-hidden h-100">
-                            <iframe class="position-relative w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                            frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
+    <!-- Contact Start -->
+    <div id="contact" class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <p class="fs-5 fw-bold text-primary">Contact Us</p>
+                    <h1 class="display-5 mb-5">Get In Touch With Pink Leaf Ltd</h1>
+                    <p class="mb-4">Have questions about our services? Need a custom quote? Our friendly team is here to help. Contact us today!</p>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <i class="fa fa-map-marker-alt text-white"></i>
                         </div>
+                        <div>
+                            <h5>Our Location</h5>
+                            <span>Greenford, Greater London, UK</span>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <i class="fa fa-phone-alt text-white"></i>
+                        </div>
+                        <div>
+                            <h5>Call Us</h5>
+                            <span>+44 20 1234 5678</span>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                            <i class="fa fa-envelope text-white"></i>
+                        </div>
+                        <div>
+                            <h5>Email Us</h5>
+                            <span>info@pinkleaf.co.uk</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
+                    <div class="position-relative rounded overflow-hidden h-100">
+                        <iframe class="position-relative w-100 h-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39774.55822923107!2d-0.3753599!3d51.5428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760d4b6a1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sGreenford%2C%20UK!5e0!3m2!1sen!2suk!4v1234567890"
+                        frameborder="0" style="min-height: 450px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
+    </div>
+    <!-- Contact End -->
+
 
 
     <!-- Footer Start -->
@@ -634,7 +678,14 @@
             // Show selected info
             const infoDiv = document.getElementById('selectedSkipInfo');
             const infoText = document.getElementById('selectedSkipText');
-            infoText.textContent = `${size.charAt(0).toUpperCase() + size.slice(1)} Skip - £${price}`;
+            
+            let displayName = '';
+            if (size === '8yard') displayName = '8 Yard Skip (Builder\'s)';
+            else if (size === '10yard') displayName = '10 Yard Skip (Large Builder\'s)';
+            else if (size === '12yard-standard') displayName = '12 Yard Skip (Standard)';
+            else if (size === '12yard-premium') displayName = '12 Yard Skip (Premium)';
+            
+            infoText.textContent = `${displayName} - £${price}`;
             infoDiv.style.display = 'block';
             
             // Scroll to form
@@ -663,7 +714,13 @@
             console.log('Order submitted:', formData);
             
             // Show success message
-            alert(`Thank you! Your ${selectedSkipSize} skip order for £${selectedSkipPrice} has been received. We'll contact you shortly at ${formData.phone} to confirm delivery details.`);
+            let displayName = '';
+            if (selectedSkipSize === '8yard') displayName = '8 Yard Skip';
+            else if (selectedSkipSize === '10yard') displayName = '10 Yard Skip';
+            else if (selectedSkipSize === '12yard-standard') displayName = '12 Yard Skip (Standard)';
+            else if (selectedSkipSize === '12yard-premium') displayName = '12 Yard Skip (Premium)';
+            
+            alert(`Thank you! Your ${displayName} order for £${selectedSkipPrice} has been received. We'll contact you shortly at ${formData.phone} to confirm delivery details.`);
             
             // Reset form
             document.getElementById('skipOrderForm').reset();
