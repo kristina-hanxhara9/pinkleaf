@@ -497,6 +497,46 @@
                                     </div>
                                     <small class="text-muted">Start typing your address and select from suggestions</small>
                                 </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control bg-light border-0" id="deliveryDate" name="deliveryDate" required>
+                                        <label for="deliveryDate">Preferred Delivery Date</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <select class="form-select bg-light border-0" id="deliveryTime" name="deliveryTime" required>
+                                            <option value="" selected disabled>Choose timing...</option>
+                                            <option value="morning">Morning (8am - 12pm)</option>
+                                            <option value="afternoon">Afternoon (12pm - 5pm)</option>
+                                            <option value="flexible">Flexible - Anytime</option>
+                                        </select>
+                                        <label for="deliveryTime">Delivery Time</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">Service Type</label>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-check p-3 border rounded bg-light">
+                                                <input class="form-check-input" type="radio" name="serviceType" id="changeover" value="changeover" checked>
+                                                <label class="form-check-label w-100" for="changeover">
+                                                    <strong>Changeover Service</strong>
+                                                    <small class="d-block text-muted">We deliver the skip, you fill it at your own pace, then we collect it when you're ready</small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check p-3 border rounded bg-light">
+                                                <input class="form-check-input" type="radio" name="serviceType" id="waitload" value="waitload">
+                                                <label class="form-check-label w-100" for="waitload">
+                                                    <strong>Wait & Load</strong>
+                                                    <small class="d-block text-muted">Our driver waits while you load the skip, then takes it away immediately (Premium service)</small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control bg-light border-0" placeholder="Any special instructions?" id="notes" name="notes" style="height: 100px"></textarea>
@@ -682,6 +722,10 @@
 
         // Check if user came from skip-guide page with a pre-selected skip
         window.addEventListener('load', function() {
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('deliveryDate').setAttribute('min', today);
+            
             const preSelectedSkip = sessionStorage.getItem('selectedSkip');
             const preSelectedPrice = sessionStorage.getItem('selectedPrice');
             
@@ -744,12 +788,16 @@
             }
             
             // Get form data
+            const serviceType = document.querySelector('input[name="serviceType"]:checked').value;
             const formData = {
                 skipSize: selectedSkipSize,
                 skipPrice: selectedSkipPrice,
                 fullName: document.getElementById('fullName').value,
                 phone: document.getElementById('phone').value,
                 address: document.getElementById('addressSearch').value,
+                deliveryDate: document.getElementById('deliveryDate').value,
+                deliveryTime: document.getElementById('deliveryTime').value,
+                serviceType: serviceType,
                 notes: document.getElementById('notes').value
             };
             
@@ -763,7 +811,11 @@
             else if (selectedSkipSize === '12yard-standard') displayName = '12 Yard Skip (Standard)';
             else if (selectedSkipSize === '14yard') displayName = '14 Yard Skip (Premium)';
             
-            alert(`Thank you! Your ${displayName} order for £${selectedSkipPrice} has been received. We'll contact you shortly at ${formData.phone} to confirm delivery details.`);
+            const timeSlot = formData.deliveryTime === 'morning' ? 'Morning (8am-12pm)' : 
+                           formData.deliveryTime === 'afternoon' ? 'Afternoon (12pm-5pm)' : 'Anytime';
+            const serviceTypeText = formData.serviceType === 'changeover' ? 'Changeover Service' : 'Wait & Load Service';
+            
+            alert(`Thank you! Your ${displayName} order for £${selectedSkipPrice} has been received.\n\nDelivery: ${formData.deliveryDate} (${timeSlot})\nService: ${serviceTypeText}\n\nWe'll contact you shortly at ${formData.phone} to confirm all details.`);
             
             // Reset form
             document.getElementById('skipOrderForm').reset();
