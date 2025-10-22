@@ -118,6 +118,7 @@
                 <a href="#home" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#services" class="nav-item nav-link">Services</a>
+                <a href="skip-guide.html" class="nav-item nav-link">Skip Guide</a>
                 <a href="#testimonials" class="nav-item nav-link">Testimonials</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
@@ -426,22 +427,22 @@
                                 </div>
                             </div>
                             
-                            <!-- 12 Yard Skip (Premium) -->
+                            <!-- 14 Yard Skip (Premium) -->
                             <div class="col-lg-3 col-md-6">
-                                <div class="skip-card rounded p-3 text-center position-relative" onclick="selectSkip('12yard-premium', 400)" id="skip-12yard-premium">
+                                <div class="skip-card rounded p-3 text-center position-relative" onclick="selectSkip('14yard', 400)" id="skip-14yard">
                                     <div class="skip-size-badge" style="background: #dc3545;">£400</div>
-                                    <img src="img/images/12yard.png" alt="12 Yard Skip Premium" class="skip-image rounded mb-3">
-                                    <h5 class="mb-2">🟩 12 Yard Skip</h5>
+                                    <img src="img/images/14yard.png" alt="14 Yard Skip Premium" class="skip-image rounded mb-3">
+                                    <h5 class="mb-2">🟩 14 Yard Skip</h5>
                                     <p class="small mb-2"><strong>(Premium Service)</strong></p>
                                     <ul class="list-unstyled text-start small mb-3">
                                         <li><i class="fa fa-ruler text-primary me-2"></i><strong>L:</strong> 3.7-4.1m (12-13.5ft)</li>
                                         <li><i class="fa fa-ruler text-primary me-2"></i><strong>W:</strong> 1.78m (5'10")</li>
                                         <li><i class="fa fa-ruler text-primary me-2"></i><strong>H:</strong> 1.68m (5'6")</li>
-                                        <li><i class="fa fa-box text-success me-2"></i><strong>Volume:</strong> 9.2 m³ / 12 yards</li>
-                                        <li><i class="fa fa-trash text-success me-2"></i><strong>Holds:</strong> 100-120 bin bags</li>
+                                        <li><i class="fa fa-box text-success me-2"></i><strong>Volume:</strong> 10.7 m³ / 14 yards</li>
+                                        <li><i class="fa fa-trash text-success me-2"></i><strong>Holds:</strong> 120-140 bin bags</li>
                                         <li><i class="fa fa-star text-warning me-2"></i><strong>Priority service</strong></li>
                                     </ul>
-                                    <button type="button" class="btn btn-danger w-100 btn-sm" onclick="selectSkip('12yard-premium', 400)">Select Premium</button>
+                                    <button type="button" class="btn btn-danger w-100 btn-sm" onclick="selectSkip('14yard', 400)">Select Premium</button>
                                 </div>
                             </div>
                         </div>
@@ -665,7 +666,8 @@
             });
             
             // Add selection to clicked card
-            document.getElementById('skip-' + size).classList.add('selected');
+            const cardEl = document.getElementById('skip-' + size);
+            if (cardEl) cardEl.classList.add('selected');
             
             // Store selection
             selectedSkipSize = size;
@@ -683,7 +685,7 @@
             if (size === '8yard') displayName = '8 Yard Skip (Builder\'s)';
             else if (size === '10yard') displayName = '10 Yard Skip (Large Builder\'s)';
             else if (size === '12yard-standard') displayName = '12 Yard Skip (Standard)';
-            else if (size === '12yard-premium') displayName = '12 Yard Skip (Premium)';
+            else if (size === '14yard') displayName = '14 Yard Skip (Premium)';
             
             infoText.textContent = `${displayName} - £${price}`;
             infoDiv.style.display = 'block';
@@ -718,7 +720,7 @@
             if (selectedSkipSize === '8yard') displayName = '8 Yard Skip';
             else if (selectedSkipSize === '10yard') displayName = '10 Yard Skip';
             else if (selectedSkipSize === '12yard-standard') displayName = '12 Yard Skip (Standard)';
-            else if (selectedSkipSize === '12yard-premium') displayName = '12 Yard Skip (Premium)';
+            else if (selectedSkipSize === '14yard') displayName = '14 Yard Skip (Premium)';
             
             alert(`Thank you! Your ${displayName} order for £${selectedSkipPrice} has been received. We'll contact you shortly at ${formData.phone} to confirm delivery details.`);
             
@@ -759,3 +761,4 @@
 </body>
 
 </html>
+
